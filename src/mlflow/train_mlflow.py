@@ -105,10 +105,11 @@ def log_to_mlflow(
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         experiment = str(sys.argv[1])
+        server = str(sys.argv[2])
 
     log_to_mlflow(
         mlflow_experiment_name=experiment,
-        remote_server_uri="https://user-ahmed-mlflow.user.lab.sspcloud.fr", #"https://user-danalejo-mlflow.user.lab.sspcloud.fr", 
+        remote_server_uri=server, 
         params="params.yaml",
         reg=True,
         freq=True,
